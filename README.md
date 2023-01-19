@@ -8,7 +8,10 @@ Once the version.dll is loaded it retrieves the shellcode from default.dll.
 
 [SigFlip](https://github.com/med0x2e/SigFlip) was used to hide the shellcode inside default.dll.  
 
-For more details, check my [blog post](https://www.mqsec.me/2023/01/19/onedriveupdater-dll-sideloading-sigflip/).
+For more details, check my [blog post](https://www.mqsec.me/2023/01/19/onedriveupdater-dll-sideloading-sigflip/).  
+
+## Compile
+> cl /EHsc /nologo /LD version.cpp Helper.cpp  
 
 ## Credits  
 + [Palo Alto Network's Blog Post](https://unit42.paloaltonetworks.com/brute-ratel-c4-tool/#Modification-of-Versiondll)  
